@@ -1,0 +1,32 @@
+{
+    "name":"27cubes/cubeobject",
+    "description":"27 Cubes Object Library",
+    "homepage": "https://github.com/mike27cubes/CubeObject",
+    "type":"library",
+    "license": "WTFPL",
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "phpunit/PHPUnit": "3.7.*",
+        "phpmd/phpmd" : "1.4.*",
+        "sebastian/phpcpd": "*",
+        "phpdocumentor/phpdocumentor": "2.*",
+        "squizlabs/php_codesniffer": "1.*",
+        "phploc/phploc": "*"
+    },
+    "authors": [
+        {
+            "name": "Mike Hickey",
+            "email": "info@27cubes.com",
+            "homepage": "http://www.27cubes.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CubeObject\\": "src/",
+            "CubeObjectTests\\": "tests/unit/"
+        }
+    }
+}
