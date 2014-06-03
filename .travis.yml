@@ -5,6 +5,6 @@ php:
   - hhvm
 
 before_script:
-  - composer install
+  - composer install phpunit/PHPUnit
 
 script: phpunit --configuration phpunit.xml
