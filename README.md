@@ -1,2 +1,6 @@
 CubeObject
 ==========
+
+LICENSE
+=======
+[LICENSE](WTFPL)
