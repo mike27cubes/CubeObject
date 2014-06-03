@@ -16,6 +16,9 @@
 namespace CubeObject\Tests;
 use CubeObject\ObjectAccessor;
 
+/**
+ * Uses ObjectAccessor trait for testing purposes
+ */
 class TraitTester
 {
     use ObjectAccessor;
