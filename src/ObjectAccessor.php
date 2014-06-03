@@ -22,7 +22,6 @@ namespace CubeObject;
  * @package    CubeObject
  * @license    http://www.wtfpl.net WTFPL
  * @link       https://github.com/mike27cubes/CubeObject
- * @version    GIT: $Id$
  * @since      %NEXT_VERSION%
  */
 trait ObjectAccessor
