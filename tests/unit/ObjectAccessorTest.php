@@ -10,7 +10,7 @@
  * @subpackage Tests
  * @author     27 Cubes <info@27cubes.net>
  * @license    http://www.wtfpl.net WTFPL
- * @since      %NEXT_VERSION%
+ * @since      0.1.0
  */
 
 namespace CubeObject\Tests;

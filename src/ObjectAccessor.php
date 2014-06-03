@@ -10,7 +10,7 @@
  * @author     27 Cubes <info@27cubes.net>
  * @license    http://www.wtfpl.net WTFPL
  * @link       https://github.com/mike27cubes/CubeObject
- * @since      %NEXT_VERSION%
+ * @since      0.1.0
  */
 
 namespace CubeObject;
@@ -22,7 +22,7 @@ namespace CubeObject;
  * @package    CubeObject
  * @license    http://www.wtfpl.net WTFPL
  * @link       https://github.com/mike27cubes/CubeObject
- * @since      %NEXT_VERSION%
+ * @since      0.1.0
  */
 trait ObjectAccessor
 {
