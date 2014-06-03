@@ -3,4 +3,4 @@ CubeObject
 
 LICENSE
 =======
-[LICENSE](WTFPL)
+[WTFPL](LICENSE)
