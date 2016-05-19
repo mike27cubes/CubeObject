@@ -87,7 +87,7 @@ trait ObjectAccessor
     /**
      * Magic Method: Setter
      *
-     * @ since %NEXT_VERSION%
+     * @ since 0.2.0
      *
      * @aparam string $name
      * @param  array  $args
