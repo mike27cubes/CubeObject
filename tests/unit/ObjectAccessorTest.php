@@ -95,7 +95,7 @@ class ObjectAccessorTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($obj->hasActive());
         $this->assertFalse($obj->isActive());
         // Set some property values
-        $obj->id = $id;
+        $retVal = $obj->setId($id);
         $obj->name = $name;
         $obj->active = true;
         // get*(), has*(), is*()
@@ -123,5 +123,14 @@ class ObjectAccessorTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($id, $obj->getId());
         $this->assertEquals($name, $obj->getName());
         $this->assertEquals($item, $obj->getItem());
+    }
+
+    /**
+     * @expectedException BadMethodCallException
+     */
+    public function testSet_LazyLoadMethod()
+    {
+        $obj = new TraitTester();
+        $obj->setItem('some value');
     }
 }
