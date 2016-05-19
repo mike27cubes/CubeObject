@@ -38,6 +38,8 @@ trait ObjectAccessor
     {
         if (substr($name, 0, 3) == 'get') {
             return $this->magicGetter($name, $args);
+        } elseif (substr($name, 0, 3) == 'set') {
+            return $this->magicSetter($name, $args);
         } elseif (substr($name, 0, 3) == 'has') {
             return $this->magicHas($name, $args);
         } elseif (substr($name, 0, 2) == 'is') {
@@ -80,6 +82,26 @@ trait ObjectAccessor
             call_user_func(array($this, $lazyLoadMethod));
         }
         return $this->$property;
+    }
+
+    /**
+     * Magic Method: Setter
+     *
+     * @ since 0.2.0
+     *
+     * @aparam string $name
+     * @param  array  $args
+     * @return self fluent interfacxe
+     */
+    protected function magicSetter($name, $args = array())
+    {
+        $property = $this->getPropertyName($name, 3);
+        $lazyLoadMethod = 'lazyLoad' . ucfirst($property);
+        if (method_exists($this, $lazyLoadMethod)) {
+            throw new \BadMethodCallException('Can set lazy-loaded data');
+        }
+        $this->$property = array_shift($args);
+        return $this;
     }
 
     /**
