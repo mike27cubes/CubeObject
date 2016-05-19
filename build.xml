@@ -7,7 +7,6 @@
 
     <target name="prepare">
         <mkdir dir="${basedir}/build/logs"/>
-        <mkdir dir="${basedir}/build/phpdoc"/>
         <mkdir dir="${basedir}/build/coverage"/>
         <mkdir dir="${basedir}/build/pdepend"/>
     </target>
@@ -55,12 +54,6 @@
         </exec>
     </target>
 
-    <target name="phpdoc" depends="prepare" description="Run PHPDoc2 tool">
-        <exec dir="${basedir}" executable="./vendor/bin/phpdoc" failonerror="false">
-            <arg line="-d ${basedir}/src -t ${basedir}/build/phpdoc" />
-        </exec>
-    </target>
-
-    <target name="build" depends="clean,prepare,phpcs,phpmd,phpcpd,pdepend,phploc,phpunit,phpdoc"/>
+    <target name="build" depends="clean,prepare,phpcs,phpmd,phpcpd,pdepend,phploc,phpunit"/>
 
 </project>
